@@ -1,0 +1,77 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72 0%, #a173dd 100%);
+    min-height: 100vh;
+}
+
+.container {
+    border: 1px solid rgb(144, 175, 216);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    background-color: rgba(164, 201, 95, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.screen {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 3rem;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+button {
+    height: 60px;
+    border-radius: 20px;
+    background-color: #f0f0f0;git config --global user.email "your-email@example.com"
+    border: 1px solid #ccc;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+.clear {
+    background-color: #ce2a2a;
+    color: #fff;
+}
+
+.clear:hover {
+    background-color: #ff4d4d;
+}
+
+.equal-sign {
+    background-color: #1fbec6;
+    color: #fff;
+}
+
+.equal-sign:hover {
+    background-color: #199da4;
+}
