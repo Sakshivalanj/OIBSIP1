@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Registration View -->
+    <section id="registerView" class="auth-card">
+      <h2>Create Account</h2>
+      <div id="regError" class="message error hidden"></div>
+      <div id="regSuccess" class="message success hidden"></div>
+
+      <form id="registerForm" novalidate>
+        <div class="form-group">
+          <label for="regUsername">Username</label>
+          <input type="text" id="regUsername" placeholder="e.g. johndoe" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" placeholder="e.g. john@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regPassword">Password</label>
+          <input type="password" id="regPassword" placeholder="Min 8 chars, 1 number" required>
+        </div>
+
+        <button type="submit" class="btn primary">Register</button>
+      </form>
+
+      <p class="switch-text">
+        Already have an account? <a href="#" id="toLogin">Log In</a>
+      </p>
+    </section>
+
+    <!-- Login View -->
+    <section id="loginView" class="auth-card hidden">
+      <h2>Welcome Back!</h2>
+      <div id="loginError" class="message error hidden"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="loginIdentifier">Username or Email</label>
+          <input type="text" id="loginIdentifier" placeholder="Enter username or email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter password" required>
+        </div>
+
+        <button type="submit" class="btn primary">Login</button>
+      </form>
+
+      <p class="switch-text">
+        Don't have an account? <a href="#" id="toRegister">Register</a>
+      </p>
+    </section>
+
+    <!-- Protected Dashboard View -->
+    <section id="dashboardView" class="auth-card hidden">
+      <h2>Protected Dashboard</h2>
+      <p class="welcome-text">Welcome back, <strong id="userDisplay">User</strong>!</p>
+      
+      <div class="dashboard-content">
+        <p>🔒 You have successfully authenticated and accessed a restricted session page.</p>
+      </div>
+
+      <button id="logoutBtn" class="btn danger">Logout</button>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

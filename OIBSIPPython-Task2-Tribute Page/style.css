@@ -1,0 +1,215 @@
+/* Custom Properties / Variables */
+:root {
+  --bg-primary: #0f172a;      /* Dark Navy */
+  --bg-secondary: #f8fafc;    /* Warm Off-White */
+  --bg-accent: #f1f5f9;       /* Light Slate */
+  --text-main: #334155;       /* Charcoal Body Text */
+  --text-dark: #0f172a;       /* Dark Headings */
+  --text-light: #f8fafc;      /* Light Text */
+  --accent-color: #0284c7;    /* Deep Cyan Accent */
+  --quote-bg: #e0f2fe;        /* Pale Cyan Accent */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+}
+
+/* Reset Rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: var(--bg-secondary);
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* Header / Hero Section */
+.hero {
+  background-color: var(--bg-primary);
+  color: var(--text-light);
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.hero .tagline {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Image Card Styling & Sizing Fixes */
+.image-card {
+  max-width: 360px;
+  margin: -2.5rem auto 3rem auto;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.image-card img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+.image-card figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+
+/* Biography Text */
+.biography p {
+  margin-bottom: 1.5rem;
+}
+
+/* Quote Callout */
+.quote-section {
+  background-color: var(--quote-bg);
+  border-left: 6px solid var(--accent-color);
+  padding: 2.5rem 2rem;
+  margin: 3rem 0;
+  border-radius: 0 12px 12px 0;
+}
+
+.quote-section blockquote {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.quote-section cite {
+  display: block;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent-color);
+}
+
+/* Timeline Layout */
+.timeline-section {
+  background-color: var(--bg-accent);
+  padding: 3rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 4rem;
+}
+
+.timeline {
+  list-style-type: none;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 3px solid #cbd5e1;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.95rem;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent-color);
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+}
+
+.timeline-date {
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-primary);
+  color: #94a3b8;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.3rem; }
+  .hero .tagline { font-size: 1.05rem; }
+  .section-title { font-size: 1.8rem; }
+  .quote-section blockquote { font-size: 1.2rem; }
+  .image-card { 
+    max-width: 280px; 
+    margin-top: -1.5rem; 
+  }
+}
